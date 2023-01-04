@@ -23,6 +23,11 @@ const arrayFrutas2 = [
             description: "Una naranja",
         },
     ];
+const fruta = {
+    name: "Naranja",
+    price: "$3.00",
+    description: "Una naranja",
+};
 </script>
 
 <template>
@@ -52,6 +57,12 @@ const arrayFrutas2 = [
     <ul>
         <li v-for="fruta in arrayFrutas2" :key="name">
             {{ fruta.name }} - {{ fruta.price }} - {{ fruta.description }}
+        </li>
+    </ul>
+    <br>
+    <ul>
+        <li v-for="(value, propiedad) in fruta">
+            {{ propiedad }} : {{ value }}
         </li>
     </ul>
 </template>
