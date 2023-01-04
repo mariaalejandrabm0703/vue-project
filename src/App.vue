@@ -4,6 +4,7 @@ const name = 'Maria Vue'
 const styleColor = 'color: blue' 
 const arrayColores = ['yellow', 'red', 'peru']
 const activo = true
+const inactivo = false
 </script>
 
 <template>
@@ -19,6 +20,9 @@ const activo = true
     <h2 :style="`color: ${arrayColores[2]}`">Soy Peru</h2>
     <br>
     <h2>{{activo? 'Estoy activo' : 'Estoy inactivo'}}</h2>
+    <br>
+    <h2 v-if="!inactivo">{{'Estoy inactivo'}}</h2>
+    <h2 v-else>{{'Estoy Activo'}}</h2>
 </template>
 
 <style>
