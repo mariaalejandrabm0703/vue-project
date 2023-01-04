@@ -1,6 +1,6 @@
 <script setup>
 // escribir javascript
-const name = 'Maria dinamico'
+const name = 'Maria Vue'
 const styleColor = 'color: blue' 
 const arrayColores = ['yellow', 'red', 'peru']
 const activo = true
@@ -8,6 +8,8 @@ const activo = true
 
 <template>
     <h1>hola {{name}}</h1>
+    <br>
+    <h1>hola {{name.toLocaleUpperCase()}}</h1>
     <br>
     <h2 style="color:blue">Soy azul</h2>
     <br>
