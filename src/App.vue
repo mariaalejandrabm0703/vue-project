@@ -55,14 +55,14 @@ const fruta = {
     </ul>
     <br>
     <ul>
-        <li v-for="fruta in arrayFrutas2" :key="name">
+        <li v-for="fruta in arrayFrutas2" :key="fruta.name">
             {{ fruta.name }} - {{ fruta.price }} - {{ fruta.description }}
         </li>
     </ul>
     <br>
     <ul>
-        <li v-for="(value, propiedad) in fruta">
-            {{ propiedad }} : {{ value }}
+        <li v-for="(value, propiedad, index) in fruta" :key="index">
+            {{ propiedad }} -> {{ value }} -> {{index}}
         </li>
     </ul>
 </template>
