@@ -3,6 +3,7 @@
 const name = 'Maria dinamico'
 const styleColor = 'color: blue' 
 const arrayColores = ['yellow', 'red', 'peru']
+const activo = true
 </script>
 
 <template>
@@ -14,6 +15,8 @@ const arrayColores = ['yellow', 'red', 'peru']
     <h2 :style="styleColor">Soy azul</h2>
     <br>
     <h2 :style="`color: ${arrayColores[2]}`">Soy Peru</h2>
+    <br>
+    <h2>{{activo? 'Estoy activo' : 'Estoy inactivo'}}</h2>
 </template>
 
 <style>
