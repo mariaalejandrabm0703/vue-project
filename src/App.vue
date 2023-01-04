@@ -2,6 +2,7 @@
 // escribir javascript
 const name = 'Maria dinamico'
 const styleColor = 'color: blue' 
+const arrayColores = ['yellow', 'red', 'peru']
 </script>
 
 <template>
@@ -11,6 +12,8 @@ const styleColor = 'color: blue'
     <br>
     <h2 v-bind:style="styleColor">Soy azul</h2>
     <h2 :style="styleColor">Soy azul</h2>
+    <br>
+    <h2 :style="`color: ${arrayColores[2]}`">Soy Peru</h2>
 </template>
 
 <style>
