@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 
 const name = "Vue 3";
 
@@ -16,11 +16,19 @@ const decrement = () => {
 const reset = () => {
     counter.value = 0;
 };
+
+const classCounter = computed(() => {
+    if (counter.value === 0) {
+        return "zero";
+    }
+    return counter.value > 0 ? "positive" : "negative";
+});
+
 </script>
 
 <template>
     <h1>Hola {{ name }}!</h1>
-    <h2 :class="counter >= 0 ? 'positive' : 'negative'">
+    <h2 :class="classCounter">
         {{ counter }}
     </h2>
     <button @click="increment">Incremet</button>
@@ -35,5 +43,9 @@ const reset = () => {
 
 .positive {
     color: green;
+}
+
+.zero {
+    color: peru;
 }
 </style>
