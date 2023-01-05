@@ -1,4 +1,4 @@
-# Aprendiendo a utilizar Vue
+# Aprendiendo a utilizar Vue 3
 
-se aplicarán los conceptos básicos de Vuejs y se realizarán ejercicios base.
+se aplicarán los conceptos básicos de Vuejs 3 y se realizarán ejercicios base.
 
