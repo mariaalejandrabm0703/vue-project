@@ -53,6 +53,7 @@ const handleClick = (prop) => {
     <hr>
     <h2>{{ activo? 'Estoy activo': 'Estoy inactivo' }}</h2>
     <hr>
+    <!-- DIRECTIVAS -->
     <h2 v-if="!inactivo">{{ 'Estoy inactivo'}}</h2>
     <h2 v-else>{{ 'Estoy Activo'}}</h2>
     <hr>
