@@ -3,17 +3,37 @@ import { ref } from "vue";
 
 const name = "Vue 3";
 
-// counter ahora es una variable reactiva
 const counter = ref(0);
 
 const increment = () => {
-    // mutamos el valor a través de .value
     counter.value++;
+};
+
+const decrement = () => {
+    counter.value--;
+};
+
+const reset = () => {
+    counter.value = 0;
 };
 </script>
 
 <template>
     <h1>Hola {{ name }}!</h1>
-    <h2>{{ counter }}</h2>
-    <button @click="increment">Click incremet</button>
+    <h2 :class="counter >= 0 ? 'positive' : 'negative'">
+        {{ counter }}
+    </h2>
+    <button @click="increment">Incremet</button>
+    <button @click="decrement">Decrement</button>
+    <button @click="reset">Reset</button>
 </template>
+
+<style>
+.negative {
+    color: red;
+}
+
+.positive {
+    color: green;
+}
+</style>
