@@ -1,16 +1,19 @@
 <script setup>
+import { ref } from "vue";
+
 const name = "Vue 3";
 
-let counter = 0;
+// counter ahora es una variable reactiva
+const counter = ref(0);
 
 const increment = () => {
-    counter = counter + 1;
-    console.log(counter);
+    // mutamos el valor a través de .value
+    counter.value++;
 };
 </script>
 
 <template>
     <h1>Hola {{ name }}!</h1>
     <h2>{{ counter }}</h2>
-    <button @click="increment()">Click incremet</button>
+    <button @click="increment">Click incremet</button>
 </template>
